@@ -1,0 +1,5 @@
+# Server 부품 폴더 무시
+server/node_modules
+
+# Client 부품 폴더 무시
+client/node_modules
