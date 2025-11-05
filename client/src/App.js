@@ -1,21 +1,20 @@
-import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
-import RegisterPage from './pages/RegisterPage';
-import LoginPage from './pages/LoginPage';
+import React from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
 
 function App() {
   return (
-    <div>
-      <nav style={{ padding: '10px', borderBottom: '1px solid #ddd' }}>
-        <Link to="/" style={{ marginRight: '10px' }}>홈</Link>
-        <Link to="/register" style={{ marginRight: '10px' }}>회원가입</Link>
-        <Link to="/login">로그인</Link>
+    <div style={{ padding: "20px" }}>
+      <nav>
+        <Link to="/login">로그인</Link> |{" "}
+        <Link to="/register">회원가입</Link>
       </nav>
+      <hr />
 
       <Routes>
-        <Route path="/" element={<h2>메인 페이지입니다!</h2>} />
-        <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
       </Routes>
     </div>
   );
